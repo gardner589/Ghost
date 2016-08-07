@@ -9,8 +9,10 @@ body{
 }
 
 .board{
-  width: 300px;
-  height: 300px;
+  /*width: 300px;*/
+  flex-basis: fit-content;
+  padding: 10px;
+  height: 100px;
   border: 2px dotted lime;
   border-radius: 10px;
   display: flex;
