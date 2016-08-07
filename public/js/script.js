@@ -22,7 +22,7 @@ $(document).ready(function(){
 
           // console.log(arry);
         }else if (brd.length > 3) {
-          if((brd.length == 5) && (brd.length%2 == 1)){
+          if((brd.length == 5) || (brd.length%2 == 0)){
             var gameray = []
             $.each(arry, function(i, thing){
               if(thing.includes(brd.toLowerCase())){
@@ -33,6 +33,15 @@ $(document).ready(function(){
             $('.board p').append(nxtLtr.charAt(brd.length).toUpperCase())
           }else{
             console.log('huh?')
+            var gameray = []
+            $.each(arry, function(i, thing){
+              if(thing.includes(brd.toLowerCase())){
+                gameray.push(thing)
+              }
+            })
+            
+            console.log(gameray);
+
           }
           console.log(gameray)
         }

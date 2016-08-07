@@ -22,3 +22,11 @@ body{
   align-items: center;
   font-size: 30px;
 }
+#letter{
+  background: black;
+  color: lime;
+  border: .5px solid black;
+  border-radius: 15px;
+  width: 20px;
+  box-shadow: 0px 2px 10px 2px white;
+}
