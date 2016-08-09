@@ -5,16 +5,13 @@ body{
   justify-content: center;
   align-items: center;
   font-family: fantasy;
-  color: lime;
+  color: #699;
+  text-shadow: 2px 4px 10px  white;
 }
 
 .board{
-  /*width: 300px;*/
   flex-basis: fit-content;
-  padding: 10px;
-  height: 100px;
-  /*border: 2px dotted lime;*/
-  box-shadow: 0px 2px 10px 2px white;
+  text-shadow: 2px 2px 8px  white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -24,10 +21,11 @@ body{
   font-size: 30px;
 }
 #letter{
-  background: black;
-  color: lime;
-  border: .5px solid black;
+  background: #699;
+  color: black;
+  text-shadow: 2px 4px 10px  white;
+  border: 1px solid #699;
   border-radius: 5px;
   width: 20px;
-  box-shadow: 0px 2px 10px 2px white;
+  /*box-shadow: 0px 2px 10px 2px white;*/
 }

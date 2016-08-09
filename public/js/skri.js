@@ -34,3 +34,26 @@ if(brd.length >= 2){
     }
     console.log(gameray)
   }
+
+
+  ===================================================================
+  ===================================================================
+
+  setTimeout(function(){
+    if(arry.length == 0){
+      alert('nope')
+    }
+    for (var i = 0; i < arry.length; i++) {
+      if(arry[i] == brd){
+        alert(array[i])
+        i = arry.length
+      }
+    }
+    var rando = Math.floor(Math.random() * arry.length)
+    $('.board p').append(arry[rando].charAt(brd.length).toUpperCase())
+    $.map(arry, function(item){
+      if(item.length != brd.length){
+        return item
+      }
+    })
+  }, 1000)
