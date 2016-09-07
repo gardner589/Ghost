@@ -7,11 +7,15 @@ body{
   font-family: fantasy;
   color: black;
   text-shadow: 4px 1px 20px  white;
+  overflow: hidden;
 }
 
 .board{
-  flex-basis: fit-content;
+  width: 30em;
+  height: 5em;
+  /*flex-basis: fit-content;*/
   text-shadow: 4px 1px 20px  white;
+  border: 1px solid white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -19,6 +23,18 @@ body{
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  overflow: hidden;
+  clear: both;
+}
+
+.backgroundvid video{
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  background-size: cover;
+  position: absolute;
 }
 #letter{
   background: #fff;
