@@ -1,5 +1,7 @@
 $(document).ready(function(){
   var arry = []
+  var playerscr = 0
+  var pcscr = 0
   $('.retry').toggle()
   function checker (){
     console.log('things happening')
@@ -37,14 +39,24 @@ $(document).ready(function(){
             var wrd = arry[rando].charAt(brd.length).toUpperCase()
             $('.board p').append(wrd)
             if(!checker()){
+              playerscr += 1
               $('body').append('<h1>You Win</h1>')
+              $('#playscre').html(playerscr)
+              $('body').append('<h2>The computer spelled the last letter!</h2>')
               $('.retry').toggle()
             }
           }else{
+            pcscr += 1
             $('input').hide()
+            $("#pcscre").html(pcscr)
             $('body').append('<h1>You Lose</h1>')
-            $('body').append('<h2>Google the word on the board</h2>')
             $('.retry').toggle()
+            for(var i = 0;i < arry.length; i++){
+              if( $('.board p').text().toLowerCase() === arry[i]){
+                $('body').append('<h2>'+arry[i].toUpperCase()+' is a word with 5 or more letters!</h2>')
+              }
+            }
+            $('body').append('<h2>..Is '+arry[i].toUpperCase()+' a word!?</h2>')
           }
         })
 
@@ -66,5 +78,6 @@ $(document).ready(function(){
 
   $('input').keyup(function(){
     var brd = $(".board p").text()
+    checker()
   })
 })

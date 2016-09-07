@@ -1,17 +1,17 @@
 body{
-  background: #699;
+  background: grey;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: fantasy;
-  color: #699;
-  text-shadow: 2px 4px 10px  white;
+  color: black;
+  text-shadow: 4px 1px 20px  white;
 }
 
 .board{
   flex-basis: fit-content;
-  text-shadow: 2px 2px 8px  white;
+  text-shadow: 4px 1px 20px  white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -21,11 +21,22 @@ body{
   font-size: 30px;
 }
 #letter{
-  background: #699;
+  background: #fff;
   color: black;
   text-shadow: 2px 4px 10px  white;
-  border: 1px solid #699;
+  border: 1px solid red;
   border-radius: 5px;
   width: 20px;
   /*box-shadow: 0px 2px 10px 2px white;*/
+}
+.retry{
+  padding: 2px;
+  border: .5px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 40px 7px white;
+}
+.retry:hover{
+  cursor: pointer;
+  color: red;
+  box-shadow: none;
 }
