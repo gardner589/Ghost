@@ -8,6 +8,7 @@ body{
   color: black;
   text-shadow: 4px 1px 20px  white;
   overflow: hidden;
+  height: 100vh;
 }
 
 .board{
@@ -26,10 +27,13 @@ body{
   overflow: hidden;
   clear: both;
 }
+.backgroundvid{
+  overflow: hidden;
+}
 
 .backgroundvid video{
   top: 0;
-  left: 0;
+  left: -40px;
   z-index: -1000;
   /*width: 100%;*/
   /*height: 100%;*/

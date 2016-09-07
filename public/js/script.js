@@ -49,14 +49,17 @@ $(document).ready(function(){
             pcscr += 1
             $('input').hide()
             $("#pcscre").html(pcscr)
+            $('body').append('<h1>You Lose</h1>')
             $('.retry').toggle()
+            var gameWord = $('.board p').text().toLowerCase()
             for(var i = 0;i < arry.length; i++){
-              if( $('.board p').text().toLowerCase() === arry[i]){
+              if( gameWord === arry[i]){
                 $('body').append('<h2>'+arry[i].toUpperCase()+' is a word with 5 or more letters!</h2>')
-              }
             }
-            $('body').append('<h2>..Is '+arry[i].toUpperCase()+' a word!?</h2>')
-          $('body').append('<h1>You Lose</h1>')
+          }
+          if(arry.indexOf(gameWord) < 0){
+            $('body').append('<h2>..Is '+gameWord.toUpperCase()+' a word!?</h2>')
+          }
         }
         })
 
