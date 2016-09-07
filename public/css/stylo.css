@@ -8,7 +8,7 @@ body{
   color: black;
   text-shadow: 4px 1px 20px  white;
   overflow: hidden;
-  height: 100vh;
+  width: 100vw;
 }
 
 .board{
@@ -37,7 +37,7 @@ body{
   z-index: -1000;
   /*width: 100%;*/
   /*height: 100%;*/
-  background-size: cover;
+  /*background-size: cover;*/
   position: absolute;
 }
 #letter{
