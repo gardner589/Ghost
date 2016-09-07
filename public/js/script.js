@@ -49,7 +49,6 @@ $(document).ready(function(){
             pcscr += 1
             $('input').hide()
             $("#pcscre").html(pcscr)
-            $('body').append('<h1>You Lose</h1>')
             $('.retry').toggle()
             for(var i = 0;i < arry.length; i++){
               if( $('.board p').text().toLowerCase() === arry[i]){
@@ -57,7 +56,8 @@ $(document).ready(function(){
               }
             }
             $('body').append('<h2>..Is '+arry[i].toUpperCase()+' a word!?</h2>')
-          }
+          $('body').append('<h1>You Lose</h1>')
+        }
         })
 
     }else{
