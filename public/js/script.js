@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  $('#start').click(function(){
+    $('.starter').hide(1200)
+  })
   var arry = []
   var playerscr = 0
   var pcscr = 0
@@ -30,10 +33,10 @@ $(document).ready(function(){
             if(thing.word.indexOf(' ') >= 0 || thing.word.length < 5 || thing.word.indexOf('-') >= 0){
             }else{
               arry.push(thing.word)
-              console.log(arry)
             }
           })
         }).then(function(){
+          console.log(arry);
           if (checker()){
             var rando = Math.floor(Math.random() * arry.length)
             var wrd = arry[rando].charAt(brd.length).toUpperCase()

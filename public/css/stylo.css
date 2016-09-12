@@ -10,10 +10,40 @@ body{
   overflow: hidden;
   width: 100vw;
 }
+.starter{
+  width: 100%;
+  height: 100%;
+  padding: 3em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  overflow: scroll;
+  background: black;
+  color: #ccc;
+}
+#start{
+  border: 1px solid white;
+  background: maroon;
+  color: #ccc;
+  border-radius: 2.5px;
+}
+#start:hover{
+  box-shadow: 2px 2px 20px 1px white;
+}
+
+.scorz{
+  width: 30em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 .board{
   width: 30em;
   height: 5em;
+  background: #777;
   /*flex-basis: fit-content;*/
   text-shadow: 4px 1px 20px  white;
   border: 1px solid white;
@@ -27,17 +57,14 @@ body{
   overflow: hidden;
   clear: both;
 }
-.backgroundvid{
-  overflow: hidden;
-}
 
-.backgroundvid video{
+.backgroundvid{
   top: 0;
-  left: -40px;
+  left: 0px;
   z-index: -1000;
-  /*width: 100%;*/
-  /*height: 100%;*/
-  /*background-size: cover;*/
+  width: 100%;
+  height: 100%;
+  background-size: cover;
   position: absolute;
 }
 #letter{
