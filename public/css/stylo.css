@@ -8,11 +8,14 @@ body{
   color: black;
   text-shadow: 4px 1px 20px  white;
   overflow: hidden;
-  width: 100vw;
+  width: 95vw;
+  margin-left: 1.5em;
 }
 .starter{
+  position: absolute;
   width: 100%;
   height: 100%;
+  margin-top: 12em;
   padding: 3em;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +24,7 @@ body{
   text-align: center;
   overflow: scroll;
   background: black;
-  color: #ccc;
+  color: white;
 }
 #start{
   border: 1px solid white;

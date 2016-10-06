@@ -25,6 +25,7 @@ $(document).ready(function(){
     evt.preventDefault();
     if(letter.length == 1 && letter != ' '){
       $('.board p').append(letter.toUpperCase())
+      $(".board p").trigger('change')
       var brd = $(".board p").text()
       $("#letter").val('')
         $.getJSON(("https://api.datamuse.com/words?sp="+brd+"*&max=1000"), function(res){
@@ -41,6 +42,7 @@ $(document).ready(function(){
             var rando = Math.floor(Math.random() * arry.length)
             var wrd = arry[rando].charAt(brd.length).toUpperCase()
             $('.board p').append(wrd)
+            $(".board p").trigger('change')
             if(!checker()){
               playerscr += 1
               $('body').append('<h1>You Win</h1>')
@@ -80,7 +82,15 @@ $(document).ready(function(){
     $('h2').remove()
     $('.retry').toggle()
   })
-
+  $(".board p").change(function(){
+    // var brd = $(".board p").text()
+    // var ltr = brd.charAt(brd.length-1)
+    $(".board p").animate({
+      // transform: 'rotate(360deg)'
+      width: '20px'
+    })
+    // console.log($(this))
+  })
 
   $('input').keyup(function(){
     var brd = $(".board p").text()
