@@ -1,6 +1,8 @@
 $(document).ready(function(){
+  $('.main').hide()
   $('#start').click(function(){
     $('.starter').hide(1200)
+    $('.main').show(1300)
   })
   var arry = []
   var playerscr = 0
@@ -25,7 +27,8 @@ $(document).ready(function(){
     evt.preventDefault();
     if(letter.length == 1 && letter != ' '){
       $('.board p').append(letter.toUpperCase())
-      $(".board p").trigger('change')
+      // $(".board p").trigger('change')
+
       var brd = $(".board p").text()
       $("#letter").val('')
         $.getJSON(("https://api.datamuse.com/words?sp="+brd+"*&max=1000"), function(res){
@@ -41,8 +44,9 @@ $(document).ready(function(){
           if (checker()){
             var rando = Math.floor(Math.random() * arry.length)
             var wrd = arry[rando].charAt(brd.length).toUpperCase()
-            $('.board p').append(wrd)
-            $(".board p").trigger('change')
+            $('.board p').hide(200)
+            $('.board p').append(wrd).show(1000)
+            // $(".board p").trigger('change')
             if(!checker()){
               playerscr += 1
               $('body').append('<h1>You Win</h1>')
@@ -70,6 +74,7 @@ $(document).ready(function(){
 
     }else{
       alert("Just one letter at a time please")
+      $("#letter").val('')
       console.log("bad");
     }
   })
@@ -82,15 +87,15 @@ $(document).ready(function(){
     $('h2').remove()
     $('.retry').toggle()
   })
-  $(".board p").change(function(){
-    // var brd = $(".board p").text()
-    // var ltr = brd.charAt(brd.length-1)
-    $(".board p").animate({
-      // transform: 'rotate(360deg)'
-      width: '20px'
-    })
-    // console.log($(this))
-  })
+  // $("input").change(function(){
+  //   var brd = $(".board p").text()
+  //   var ltr = brd.charAt(brd.length-1)
+  //   $(".board p").css({
+  //     transform: 'rotate(360deg)',
+  //     transition: 'transform 1s'
+  //   })
+  //   console.log($(this))
+  // })
 
   $('input').keyup(function(){
     var brd = $(".board p").text()

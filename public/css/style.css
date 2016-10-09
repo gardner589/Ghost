@@ -1,0 +1,85 @@
+body{
+  background: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  color: black;
+  text-shadow: 4px 1px 20px  white;
+  overflow: hidden;
+  width: 95vw;
+  margin-left: 1.5em;
+  background: url('../media/smokeBG.gif') 100% fixed;
+  background-size: cover;
+}
+.starter{
+  position: absolute;
+  font-size: 2em;
+  top: 5em;
+}
+#start{
+  position: absolute;
+  margin: auto;
+  left: 40%;
+  text-align: center;
+  width: 5em;
+  height: 2em;
+  color: #603;
+  border: 1px outset #603;
+  box-shadow: .5px 1px 5px white;
+  border-radius: 5px;
+  background: #ccc;
+}
+#start:hover{
+  box-shadow: ;
+  border: 1px solid white;
+  color: white;
+}
+.main{
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.main h3{
+  font-size: 2em;
+}
+.scorz{
+  width: 95%;
+  border: 2px solid #603;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.board{
+  text-align: center;
+  font-size: 2em;
+}
+#letter{
+  width: 2em;
+}
+#pcscre{
+ color: blue;
+ padding: .2em;
+ background: #ccc;
+ border-radius: 5px;
+}
+#playscre{
+  color: red;
+  padding: .2em;
+  background: #ccc;
+  border-radius: 5px;
+}
+.retry{
+  position: relative;
+  border: 2px solid #603;
+  width: 5em;
+  font-weight: bolder;
+  color: white;
+  left: 40%;
+  border-radius: 5px;
+}
+.retry:hover{
+  color: lime;
+  pointer-events: all;
+}
