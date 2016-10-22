@@ -4,38 +4,56 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
 
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <script type="text/javascript" src="public/js/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/stylo.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <!-- <img class="backgroundvid" src="public/media/smokeBG.gif" alt="smokeBG" /> -->
-    <div class="starter">
+    <div class="starter container-fluid text-center">
       <p>
         Ghost is a game where you try to spell a word against the computer! <br>Choose one letter at a time, alternating turns with the computer.<br> Whoever spells the last letter of the word loses!<br> Proper nouns are allowed!
       </p>
-      <button type="button" id="start">START</button>
+      <button type="button" class="btn btn-success" id="start">START</button>
     </div>
-    <div class="main">
-
-    <h3>&#9961;..Ghost..&#9961;</h3>
-    <!-- <h3>&#9961;</h3> -->
-    <!-- <h1>&#9853; &#9532; &#9888;</h1> -->
-    <div class="scorz">
-      <h3 class="scorePlyr">Player Score - <span id="playscre"></span> </h3>
-      <h3 class="scoreCp">Computer Score - <span id="pcscre"></span> </h3>
+    <div class="main container-fluid text-center">
+      <div class="jumbotron headBG">
+        <h3>&#9961;Ghost&#9961;</h3>
+      </div>
+    <div class="scorz panel panel-default">
+      <div class="panel-heading">
+        <h1>Scores</h1>
+      </div>
+      <div class="panel-body">
+        <h3 class="col-md-6">Player Score - <span id="playscre" class="well well-sm"></span></h3>
+        <br>
+        <h3 class="col-md-6">Computer Score - <span id="pcscre" class="well well-sm"></span> </h3>
+        <br>
+      </div>
     </div>
 
-    <div class="board">
+    <div class="board well well-lg">
       <p></p>
     </div>
     <form class="playerMove">
-      <input type="text" autocomplete="off" id="letter" autofocus>
+      <input type="text" placeholder="Enter letter here" autocomplete="off" id="letter" autofocus>
     </form>
+    <div class="message">
 
+    </div>
     <div class="retry">
-      Try Again??
+      <button class="btn btn-danger" name="button">
+        Try Again??
+      </button>
     </div>
 
     </div>

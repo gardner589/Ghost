@@ -14,7 +14,7 @@ $(document).ready(function(){
     while (i < arry.length){
       if ($('.board p').text().toLowerCase() === arry[i]){
         $('input').hide()
-        $('body').append('<h1>Game Over</h1>')
+        $('.message').append('<h1>Game Over</h1>')
         return false
       }else{
         return true
@@ -27,8 +27,6 @@ $(document).ready(function(){
     evt.preventDefault();
     if(letter.length == 1 && letter != ' '){
       $('.board p').append(letter.toUpperCase())
-      // $(".board p").trigger('change')
-
       var brd = $(".board p").text()
       $("#letter").val('')
         $.getJSON(("https://api.datamuse.com/words?sp="+brd+"*&max=1000"), function(res){
@@ -46,28 +44,27 @@ $(document).ready(function(){
             var wrd = arry[rando].charAt(brd.length).toUpperCase()
             $('.board p').hide(200)
             $('.board p').append(wrd).show(1000)
-            // $(".board p").trigger('change')
             if(!checker()){
               playerscr += 1
-              $('body').append('<h1>You Win</h1>')
+              $('.message').append('<h1>You Win</h1>')
               $('#playscre').html(playerscr)
-              $('body').append('<h2>The computer spelled the last letter!</h2>')
+              $('.message').append('<h2>The computer spelled the last letter!</h2>')
               $('.retry').toggle()
             }
           }else{
             pcscr += 1
             $('input').hide()
             $("#pcscre").html(pcscr)
-            $('body').append('<h1>You Lose</h1>')
+            $('.message').append('<h1>You Lose</h1>')
             $('.retry').toggle()
             var gameWord = $('.board p').text().toLowerCase()
             for(var i = 0;i < arry.length; i++){
               if( gameWord === arry[i]){
-                $('body').append('<h2>'+arry[i].toUpperCase()+' is a word with 5 or more letters!</h2>')
+                $('.message').append('<h2>'+arry[i].toUpperCase()+' is a word with 5 or more letters!</h2>')
             }
           }
           if(arry.indexOf(gameWord) < 0){
-            $('body').append('<h2>..Is '+gameWord.toUpperCase()+' a word!?</h2>')
+            $('.message').append('<h2>..Is '+gameWord.toUpperCase()+' a word!?</h2>')
           }
         }
         })
@@ -87,16 +84,6 @@ $(document).ready(function(){
     $('h2').remove()
     $('.retry').toggle()
   })
-  // $("input").change(function(){
-  //   var brd = $(".board p").text()
-  //   var ltr = brd.charAt(brd.length-1)
-  //   $(".board p").css({
-  //     transform: 'rotate(360deg)',
-  //     transition: 'transform 1s'
-  //   })
-  //   console.log($(this))
-  // })
-
   $('input').keyup(function(){
     var brd = $(".board p").text()
     checker()
