@@ -13,16 +13,27 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="public/js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="public/css/stylo.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
     <div class="starter container-fluid text-center">
-      <p>
-        Ghost is a game where you try to spell a word against the computer! <br>Choose one letter at a time, alternating turns with the computer.<br> Whoever spells the last letter of the word loses!<br> Proper nouns are allowed!
-      </p>
+      <!-- <p>
+        Ghost is  a game where you try to spell a word against the computer! <br>Choose one letter at a time, alternating turns with the computer.<br> Whoever spells the last letter of the word loses!<br> Proper nouns are allowed!
+      </p> -->
+      <pre>
+        var express = require('express')
+        var app = express()
+        app.use(express.static(__dirname + '/public'))
+
+        app.get('/',function(req,res){
+          res.sendfile('index.html')
+        })
+        app.listen(3022, function(){
+          console.log("Listening localhost:3022");
+        })
+      </pre>
       <button type="button" class="btn btn-success" id="start">START</button>
     </div>
     <div class="main container-fluid text-center">
@@ -58,5 +69,6 @@
 
     </div>
 
+    <script type="text/javascript" src="public/js/script.js"></script>
   </body>
 </html>
